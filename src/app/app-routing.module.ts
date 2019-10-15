@@ -38,6 +38,7 @@ import {TooltipsPopoversComponent} from './DemoPages/Components/tooltips-popover
 // Tables
 
 import {TablesMainComponent} from './DemoPages/Tables/tables-main/tables-main.component';
+import {AdminPerfilComponent} from './DemoPages/Components/admin-perfil/admin-perfil.component';  //new
 
 // Widgets
 
@@ -84,6 +85,7 @@ const routes: Routes = [
       // Tables
 
       {path: 'tables/bootstrap', component: TablesMainComponent, data: {extraParameter: 'tablesMenu'}},
+      {path: 'components/admin-perfil',component: AdminPerfilComponent, data: {extraParameter: 'componentsMenu'}},  //new
 
       // Widgets
 

@@ -1,0 +1,202 @@
+<div class="main-card mb-3 card">
+  <div class="card-header">
+    admin-perfil works!
+    <div class="pull-right">
+      <div class="btn-group">
+        <button class="btn-wide btn btn-warning">
+          Nuevo
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 mx-auto" style="margin-top: 5%;">
+      <div class="md-form">
+        <input type="text" class="form-control" [(ngModel)]="searchText" (keyup)="searchItems()" id="search-input"
+                mdbInput>
+        <label for="search-input"></label>
+      </div>
+  </div>
+  <div class="table-responsive">
+    <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+      <thead>
+      <tr>
+        <th class="text-center">#</th>
+        <th>Name</th>
+        <th class="text-center">Ciudad</th>
+        <th class="text-center">Teléfono</th>
+        <th class="text-center">Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr  *ngFor="let hero of integrantes">
+        <td class="text-center text-muted">#{{hero.id}}</td>
+        <td>
+          <div class="widget-content p-0">
+            <div class="widget-content-wrapper">
+              <div class="widget-content-left mr-3">
+                <div class="widget-content-left">
+                  <img width="40" class="rounded-circle" src="./assets/images/avatars/4.jpg" alt="">
+                </div>
+              </div>
+              <div class="widget-content-left flex2">
+                <div class="widget-heading">{{hero.nombre}}</div>
+                <div class="widget-subheading opacity-7">{{hero.cargo}}</div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td contenteditable class="text-center">{{hero.ciudad}}</td>
+        <td class="text-center">
+          <div contenteditable class="badge badge-warning">{{hero.telefono}}</div>
+        </td>
+        <td class="text-center">
+          <button type="button" class="btn btn-primary btn-sm">Editar</button>
+        </td>
+      </tr>
+      <!-- <tr>
+        <td class="text-center text-muted">#347</td>
+        <td>
+          <div class="widget-content p-0">
+            <div class="widget-content-wrapper">
+              <div class="widget-content-left mr-3">
+                <div class="widget-content-left">
+                  <img width="40" class="rounded-circle" src="./assets/images/avatars/3.jpg" alt="">
+                </div>
+              </div>
+              <div class="widget-content-left flex2">
+                <div class="widget-heading">Ruben Tillman</div>
+                <div class="widget-subheading opacity-7">Etiam sit amet orci eget</div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center">Berlin</td>
+        <td class="text-center">
+          <div class="badge badge-success">Completed</div>
+        </td>
+        <td class="text-center">
+          <button type="button" class="btn btn-primary btn-sm">Details</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-center text-muted">#321</td>
+        <td>
+          <div class="widget-content p-0">
+            <div class="widget-content-wrapper">
+              <div class="widget-content-left mr-3">
+                <div class="widget-content-left">
+                  <img width="40" class="rounded-circle" src="./assets/images/avatars/2.jpg" alt="">
+                </div>
+              </div>
+              <div class="widget-content-left flex2">
+                <div class="widget-heading">Elliot Huber</div>
+                <div class="widget-subheading opacity-7">Lorem ipsum dolor sic</div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center">London</td>
+        <td class="text-center">
+          <div class="badge badge-danger">In Progress</div>
+        </td>
+        <td class="text-center">
+          <button type="button" class="btn btn-primary btn-sm">Details</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-center text-muted">#55</td>
+        <td>
+          <div class="widget-content p-0">
+            <div class="widget-content-wrapper">
+              <div class="widget-content-left mr-3">
+                <div class="widget-content-left">
+                  <img width="40" class="rounded-circle" src="./assets/images/avatars/1.jpg" alt=""></div>
+              </div>
+              <div class="widget-content-left flex2">
+                <div class="widget-heading">Vinnie Wagstaff</div>
+                <div class="widget-subheading opacity-7">UI Designer</div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center">Amsterdam</td>
+        <td class="text-center">
+          <div class="badge badge-info">On Hold</div>
+        </td>
+        <td class="text-center">
+          <button type="button" class="btn btn-primary btn-sm">Details</button>
+        </td>
+      </tr> -->
+      </tbody>
+    </table>
+  </div>
+  <div class="d-block text-center card-footer">
+    <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
+      <i class="pe-7s-trash btn-icon-wrapper"> </i>
+    </button>
+    <button class="btn-wide btn btn-success">Save</button>
+  </div>
+
+  <div class="table-responsive">
+    <h2>{{ header }}</h2>
+    <p>{{ description | uppercase }}</p>
+    <p>
+      You have
+      <mark [class]="counterClass">{{ numContacts }}</mark>
+      contacts right now.
+    </p>
+
+    <input value="Show Form" type="button" (click)="formHidden = false" />
+    <input value="Hide Form" type="button" (click)="formHidden = true" />
+    <form [ngClass]="{ 'hidden' : formHidden }">
+    <fieldset><legend>Contact Form</legend></fieldset>
+    </form>
+
+    <section>
+      <label for="name">Name</label>
+      <input name="name" type="text" [(ngModel)]="contact.name" placeholder="Contact name" />
+    </section>
+    <section>
+      <label for="isVIP">Is V.I.P.</label>
+      <input name="isVIP" type="checkbox" [(ngModel)]="contact.isVIP" />
+    <!-- </section> -->
+    <!-- <section> -->
+      <label for="gender">Gender</label>
+      <input name="gender" value="male" type="radio" [(ngModel)]="contact.gender" />
+      <i>Male</i>
+      <input name="gender" value="female" type="radio" [(ngModel)]="contact.gender" />
+      <i>Female</i>
+    <!-- </section> -->
+    <pre>{{ contact | json }}</pre>
+    <!-- <section> -->
+      <label for="workStatus">Work Status</label>
+      <select name="workStatus" [(ngModel)]="contact.workStatus">
+        <option *ngFor="let wkSt of workStatuses" [value]="wkSt.id">
+          <span>{{ wkSt.description }}</span>
+        </option>
+      </select>
+    </section>
+    <section *ngIf="contact.workStatus=='3'; else education">
+      <label for="company">Company Name</label>
+      <input name="company" type="text" [(ngModel)]="contact.company" />
+    </section>
+    <ng-template #education>
+      <section>
+        <label for="education">Education</label>
+        <input name="education" type="text" [(ngModel)]="contact.education"/>
+      </section>
+    </ng-template>
+
+    <input value="Save" type="submit" (click)="saveContact()" />
+
+
+    <ul *ngIf="contacts.length>0; else empty">
+      <li *ngFor="let contact of contacts">
+        <span>{{ contact.name }}</span>
+        <input value="Delete" type="button" (click)="deleteContact(contact)" />
+      </li>
+    </ul>
+    <ng-template #empty> <i>No data yet</i> </ng-template>
+
+  </div>
+</div>
