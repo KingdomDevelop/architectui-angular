@@ -8,6 +8,9 @@ import {rootReducer, ArchitectUIState} from './ThemeOptions/store';
 import {ConfigActions} from './ThemeOptions/store/config.actions';
 import {AppRoutingModule} from './app-routing.module';
 import {LoadingBarRouterModule} from '@ngx-loading-bar/router';
+import { FullCalendarModule } from 'ng-fullcalendar'; //New
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 import {CommonModule} from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
@@ -103,11 +106,18 @@ import {BubbleChartComponent} from './DemoPages/Charts/chartjs/examples/bubble-c
 import {DynamicChartComponent} from './DemoPages/Charts/chartjs/examples/dynamic-chart/dynamic-chart.component';
 import {DoughnutChartComponent} from './DemoPages/Charts/chartjs/examples/doughnut-chart/doughnut-chart.component';
 import {PieChartComponent} from './DemoPages/Charts/chartjs/examples/pie-chart/pie-chart.component';
-import {AdminPerfilComponent} from './DemoPages/Components/admin-perfil/admin-perfil.component'; // new
+import {AdminPerfilComponent} from './DemoPages/Components/admin-perfil/admin-perfil.component';
+import { AdminVacacionesComponent } from './DemoPages/Components/admin-vacaciones/admin-vacaciones.component';
+import { AdminLicenciasComponent } from './DemoPages/Components/admin-licencias/admin-licencias.component';
+import { AdminPermisosComponent } from './DemoPages/Components/admin-permisos/admin-permisos.component';
+import { AdminCalendarioComponent } from './DemoPages/Components/admin-calendario/admin-calendario.component';
+import { AdminRegistroTurnosComponent } from './DemoPages/Components/admin-registro-turnos/admin-registro-turnos.component';
+import { VisualizarPermisosLicenciasComponent } from './DemoPages/Components/visualizar-permisos-licencias/visualizar-permisos-licencias.component'; // new
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
+
 
 @NgModule({
   declarations: [
@@ -194,7 +204,13 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DynamicChartComponent,
     BubbleChartComponent,
     ScatterChartComponent,
-    AdminPerfilComponent,  //New
+    AdminPerfilComponent,
+    AdminVacacionesComponent,
+    AdminLicenciasComponent,
+    AdminPermisosComponent,
+    AdminCalendarioComponent,
+    AdminRegistroTurnosComponent,
+    VisualizarPermisosLicenciasComponent,  //New
   ],
   imports: [
     BrowserModule,
@@ -203,6 +219,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     NgReduxModule,
     CommonModule,
     LoadingBarRouterModule,
+    FullCalendarModule, // New
+    BrowserAnimationsModule,  //New
+    CalendarModule.forRoot({  
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }), //New
 
     // Angular Bootstrap Components
 

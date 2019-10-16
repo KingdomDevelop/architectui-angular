@@ -1,0 +1,56 @@
+<app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon"></app-page-title>
+<div class="card main-card mb-4">
+    <div class="card-header">
+      Permisos de Inasistencia Laboral
+    </div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">N° Registro</th>
+        <th scope="col">Trabajador</th>
+        <th scope="col">Area</th>
+        <th scope="col">Fecha Permiso</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let country of countries; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+          <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="mr-2"
+               style="width: 20px">
+          {{ country.name }}
+        </td>
+        <td>{{ country.area }}</td>
+        <td>{{ country.population }}</td>
+      </tr>
+      </tbody>
+    </table>
+</div>
+<!-- <div class="col-lg-12"> -->
+    <div class="main-card mb-4 card">
+      <div class="card-body"><h5 class="card-title">Licencias Medicas Registradas</h5>
+        <table class="mb-0 table table-striped">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Enfermedad</th>
+            <th>Area</th>
+            <th>Fecha de Inicio</th>
+            <th>Fecha de Termino</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let lmedica of licenciasmedicas; index as i" >
+            <th scope="row">{{ i + 1 }}</th>
+            <td> {{ lmedica.name }} </td>
+            <td> {{ lmedica.enfermedad }} </td>
+            <td> {{ lmedica.area }} </td>
+            <td> {{ lmedica.fInicio }} </td>
+            <td> {{ lmedica.fTermino }} </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  <!-- </div> -->

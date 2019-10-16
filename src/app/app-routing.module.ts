@@ -38,7 +38,16 @@ import {TooltipsPopoversComponent} from './DemoPages/Components/tooltips-popover
 // Tables
 
 import {TablesMainComponent} from './DemoPages/Tables/tables-main/tables-main.component';
+
+//Registro Flota
+
 import {AdminPerfilComponent} from './DemoPages/Components/admin-perfil/admin-perfil.component';  //new
+import {AdminPermisosComponent} from './DemoPages/Components/admin-permisos/admin-permisos.component'; 
+import {AdminRegistroTurnosComponent} from './DemoPages/Components/admin-registro-turnos/admin-registro-turnos.component'; 
+import {AdminVacacionesComponent} from './DemoPages/Components/admin-vacaciones/admin-vacaciones.component'; 
+import {AdminCalendarioComponent} from './DemoPages/Components/admin-calendario/admin-calendario.component';
+import {AdminLicenciasComponent} from './DemoPages/Components/admin-licencias/admin-licencias.component';
+import {VisualizarPermisosLicenciasComponent} from './DemoPages/Components/visualizar-permisos-licencias/visualizar-permisos-licencias.component';
 
 // Widgets
 
@@ -85,7 +94,16 @@ const routes: Routes = [
       // Tables
 
       {path: 'tables/bootstrap', component: TablesMainComponent, data: {extraParameter: 'tablesMenu'}},
+      
+      //Registro Flota
+
       {path: 'components/admin-perfil',component: AdminPerfilComponent, data: {extraParameter: 'componentsMenu'}},  //new
+      {path: 'components/admin-permisos',component: AdminPermisosComponent, data: {extraParameter: 'componentsMenu'}},  //new
+      {path: 'components/admin-registro-turnos',component: AdminRegistroTurnosComponent, data: {extraParameter: 'componentsMenu'}},  //new
+      {path: 'components/admin-vacaciones',component: AdminVacacionesComponent, data: {extraParameter: 'componentsMenu'}},  //new
+      {path: 'components/admin-calendario',component:AdminCalendarioComponent, data: {extraParameter: 'componentsMenu'}},  //new
+      {path:'components/admin-licencias',component:AdminLicenciasComponent, data:{extraParameter:'componentsMenu'}}, //new
+      {path:'components/visualizar-permisos-licencias',component:VisualizarPermisosLicenciasComponent,data:{extraParameter:'componentsMenu'}}, //new
 
       // Widgets
 
@@ -117,6 +135,12 @@ const routes: Routes = [
   },
   {path: '**', redirectTo: ''}
 ];
+
+//New
+const appRoutes: Routes = [
+  {path: 'LicenciaPermisos', component: AdminPermisosComponent}
+]
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,
