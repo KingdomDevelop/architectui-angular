@@ -1,3 +1,10 @@
-<p>
-  admin-vacaciones works!
-</p>
+<app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon"></app-page-title>
+<nav class="navbar navbar-dark bg-primary">
+    <!-- Navbar content -->
+    <a class="navbar-brand" routerLink="/components/visualizar-permisos-licencias">Ver Todos</a>
+    <a class="navbar-brand" routerLink="/components/admin-permisos">Vacaciones</a>
+    <a class="navbar-brand" href="#">Ingreso</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>

@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminRegistroTurnosComponent implements OnInit {
 
+  heading = 'Form Controls Turnos';
+  subheading = 'Wide selection of forms controls, using the Bootstrap 4 code base, but built with Vue.';
+  icon = 'pe-7s-note icon-gradient bg-premium-dark';
   constructor() { }
 
   ngOnInit() {

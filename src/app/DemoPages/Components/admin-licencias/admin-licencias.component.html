@@ -1,16 +1,12 @@
 <app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon"></app-page-title>
-<p>
-  admin-licencias works!
-</p>
 <nav class="navbar navbar-dark bg-primary">
     <!-- Navbar content -->
     <a class="navbar-brand" routerLink="/components/visualizar-permisos-licencias">Ver Todos</a>
-    <a class="navbar-brand" routerLink="/components/admin-permisos">Permisos</a>
+    <a class="navbar-brand" routerLink="/components/admin-licencias">Permisos</a>
     <a class="navbar-brand" href="#">Ingreso</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
 </nav>
 <form>
     <div class="row" style="margin-top: 5%;">
@@ -40,7 +36,8 @@
                     </select>
                 </div>
                 <div class="position-relative form-group"><label for="exampleText">Justificativo</label><textarea
-                        name="text" id="exampleText" class="form-control"></textarea></div>
+                        name="text" id="exampleText" class="form-control"></textarea>
+                </div>
                 <div class="position-relative form-group"><label for="exampleFile">File</label><input name="file"
                                                                                                       id="exampleFile"
                                                                                                       type="file"

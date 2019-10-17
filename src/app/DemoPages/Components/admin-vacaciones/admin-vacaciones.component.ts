@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminVacacionesComponent implements OnInit {
 
+  heading = 'Form Controls Vacation';
+  subheading = 'Wide selection of forms controls, using the Bootstrap 4 code base, but built with Vue.';
+  icon = 'pe-7s-sun icon-gradient bg-premium-dark';
   constructor() { }
 
   ngOnInit() {

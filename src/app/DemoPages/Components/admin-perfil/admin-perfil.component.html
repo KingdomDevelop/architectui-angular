@@ -1,6 +1,15 @@
-<div class="main-card mb-3 card">
+<app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon"></app-page-title>
+<nav class="navbar navbar-dark bg-primary">
+    <!-- Navbar content -->
+    <a class="navbar-brand" routerLink="/components/visualizar-permisos-licencias">Ver Todos</a>
+    <a class="navbar-brand" routerLink="/components/admin-perfil">Perfiles</a>
+    <a class="navbar-brand" href="#">Ingreso</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+<div class="main-card mb-3 card" style="margin-top: 5%;">
   <div class="card-header">
-    admin-perfil works!
     <div class="pull-right">
       <div class="btn-group">
         <button class="btn-wide btn btn-warning">
@@ -137,7 +146,7 @@
     <button class="btn-wide btn btn-success">Save</button>
   </div>
 
-  <div class="table-responsive">
+  <!-- <div class="table-responsive">
     <h2>{{ header }}</h2>
     <p>{{ description | uppercase }}</p>
     <p>
@@ -159,16 +168,12 @@
     <section>
       <label for="isVIP">Is V.I.P.</label>
       <input name="isVIP" type="checkbox" [(ngModel)]="contact.isVIP" />
-    <!-- </section> -->
-    <!-- <section> -->
       <label for="gender">Gender</label>
       <input name="gender" value="male" type="radio" [(ngModel)]="contact.gender" />
       <i>Male</i>
       <input name="gender" value="female" type="radio" [(ngModel)]="contact.gender" />
       <i>Female</i>
-    <!-- </section> -->
     <pre>{{ contact | json }}</pre>
-    <!-- <section> -->
       <label for="workStatus">Work Status</label>
       <select name="workStatus" [(ngModel)]="contact.workStatus">
         <option *ngFor="let wkSt of workStatuses" [value]="wkSt.id">
@@ -189,7 +194,6 @@
 
     <input value="Save" type="submit" (click)="saveContact()" />
 
-
     <ul *ngIf="contacts.length>0; else empty">
       <li *ngFor="let contact of contacts">
         <span>{{ contact.name }}</span>
@@ -198,5 +202,6 @@
     </ul>
     <ng-template #empty> <i>No data yet</i> </ng-template>
 
-  </div>
+  </div> -->
+  
 </div>
