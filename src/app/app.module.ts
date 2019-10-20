@@ -112,7 +112,9 @@ import { AdminLicenciasComponent } from './DemoPages/Components/admin-licencias/
 import { AdminPermisosComponent } from './DemoPages/Components/admin-permisos/admin-permisos.component';
 import { AdminCalendarioComponent } from './DemoPages/Components/admin-calendario/admin-calendario.component';
 import { AdminRegistroTurnosComponent } from './DemoPages/Components/admin-registro-turnos/admin-registro-turnos.component';
-import { VisualizarPermisosLicenciasComponent } from './DemoPages/Components/visualizar-permisos-licencias/visualizar-permisos-licencias.component'; // new
+import { VisualizarPermisosLicenciasComponent } from './DemoPages/Components/visualizar-permisos-licencias/visualizar-permisos-licencias.component';
+import { IngresarPermisoComponent } from './DemoPages/Components/ingresar-permiso/ingresar-permiso.component';
+import { IngresarLicenciaComponent } from './DemoPages/Components/ingresar-licencia/ingresar-licencia.component'; // new
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -210,7 +212,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AdminPermisosComponent,
     AdminCalendarioComponent,
     AdminRegistroTurnosComponent,
-    VisualizarPermisosLicenciasComponent,  //New
+    VisualizarPermisosLicenciasComponent,
+    IngresarPermisoComponent,
+    IngresarLicenciaComponent,  //New
   ],
   imports: [
     BrowserModule,

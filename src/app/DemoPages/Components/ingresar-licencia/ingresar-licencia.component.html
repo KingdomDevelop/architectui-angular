@@ -1,0 +1,154 @@
+<app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon"></app-page-title>
+<nav class="navbar navbar-dark bg-primary">
+    <!-- Navbar content -->
+    <a class="navbar-brand" routerLink="/components/visualizar-permisos-licencias">Ver Todos</a>
+    <a class="navbar-brand" routerLink="/components/admin-licencias">Permisos</a>
+    <a class="navbar-brand" routerLink="/components/ingresar-licencia">Ingreso</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+<form>
+  <div class="row" style="margin-top: 5%;">
+      <div class="col-md-12">
+        <div class="main-card mb-3 card">
+          <div class="card-body"><h5 class="card-title">Registro de Licencias</h5>
+            <form>
+              <div class="position-relative form-group"><label for="exampleSelect">Trabajador</label>
+                <select placeholder="Seleccionar Trabajador" name="select" id="exampleSelect" class="form-control">
+                  <option>Gaspar Nahuelcura</option>
+                  <option>Daniel Fuenzalida</option>
+                  <option>Rodrigo Cifuentes</option>
+                  <option>Maria Jose</option>
+                  <option>Juan Perez</option>
+                </select>
+              </div>
+
+              <div class="position-relative form-group">
+                <label for="exampleSelectMulti">Tipo de Ausencia</label>
+                  <select multiple="multiple" name="selectMulti" id="exampleSelectMulti" class="form-control">
+                    <option>Tramite Personal</option>
+                    <option>Problema Familiar</option>
+                    <option>Devolución de dias</option>
+                    <option>Enfermedad</option>
+                    <option>Sin Aviso</option>
+                    <option>Otro</option>
+                  </select>
+              </div>
+              <div class="position-relative form-group"><label for="exampleText">Justificativo</label><textarea
+                      name="text" id="exampleText" class="form-control"></textarea>
+              </div>
+              <div class="position-relative form-group"><label for="exampleFile">File</label><input name="file"
+                                                                                                    id="exampleFile"
+                                                                                                    type="file"
+                                                                                                    class="form-control-file">
+                <small class="form-text text-muted">This is some placeholder block-level help text for the above
+                  input. It's a bit lighter and easily wraps to a new line.
+                </small>
+              </div>
+              <button class="mt-1 btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="row" style="margin-top: 5%;"> 
+    <div class="col-md-6">
+      <div class="main-card mb-3 card">
+        <div class="card-body"><h5 class="card-title">Tipo Permiso</h5>
+          <div class="position-relative form-group">
+            <div>
+              <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox"
+                                                                 class="custom-control-input"><label
+                      for="exampleCustomCheckbox" class="custom-control-label">Por el día</label>
+              </div>
+              <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox2"
+                                                                 class="custom-control-input"><label
+                      for="exampleCustomCheckbox2" class="custom-control-label">Varios días</label>
+              </div>
+              <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox3"
+                        class="custom-control-input"><label
+                      for="exampleCustomCheckbox3" class="custom-control-label">Semana</label>
+              </div>
+              <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox4"
+                                                                  class="custom-control-input"><label
+                      for="exampleCustomCheckbox4" class="custom-control-label">Mes</label>
+              </div>
+              <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox5"
+                                                                 disabled="disabled"
+                                                                 class="custom-control-input"><label
+                      for="exampleCustomCheckbox5" class="custom-control-label">But not this disabled one</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-card mb-3 card">
+        <div class="card-body"><h5 class="card-title">Descuento Legal de Ausencias</h5>
+          <div class="position-relative form-group">
+            <div>
+              <div class="custom-checkbox custom-control custom-control-inline"><input type="checkbox"
+                                                                                       id="exampleCustomInline"
+                                                                                       class="custom-control-input"><label
+                      for="exampleCustomInline" class="custom-control-label">Aplica</label></div>
+              <!-- <div class="custom-checkbox custom-control custom-control-inline"><input type="checkbox"
+                                                                                       id="exampleCustomInline2"
+                                                                                       class="custom-control-input"><label
+                      for="exampleCustomInline2" class="custom-control-label">No Aplica</label></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="main-card mb-3 card">
+        <div class="card-body"><h5 class="card-title">¿Licencia?</h5>
+          <div class="position-relative form-group">
+            <div>
+              <div class="custom-radio custom-control"><input type="radio" id="exampleCustomRadio"
+                                                              name="customRadio"
+                                                              class="custom-control-input"><label
+                      for="exampleCustomRadio" class="custom-control-label">Registro Licencia</label></div>
+              <div class="custom-radio custom-control"><input type="radio" id="exampleCustomRadio2"
+                                                              name="customRadio"
+                                                              class="custom-control-input"><label
+                      for="exampleCustomRadio2" class="custom-control-label">Sin Licencia</label></div>
+              <div class="custom-radio custom-control"><input type="radio" id="exampleCustomRadio3"
+                                                              disabled="disabled"
+                                                              class="custom-control-input"><label
+                      for="exampleCustomRadio3" class="custom-control-label">But not this disabled one</label></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-card mb-3 card">
+        <div class="card-body"><h5 class="card-title">Form Select</h5>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="position-relative form-group"><label for="exampleCustomSelect">Custom
+                Select</label><select type="select" id="exampleCustomSelect" name="customSelect"
+                                      class="custom-select">
+                <option value="">Select</option>
+                <option>Value 1</option>
+                <option>Value 2</option>
+                <option>Value 3</option>
+                <option>Value 4</option>
+                <option>Value 5</option>
+              </select></div>
+              <!-- <div class="position-relative form-group"><label for="exampleCustomMutlipleSelect">Custom Multiple
+                Select</label><select multiple="multiple" type="select" id="exampleCustomMutlipleSelect"
+                                      name="customSelect" class="custom-select">
+                <option value="">Select</option>
+                <option>Value 1</option>
+                <option>Value 2</option>
+                <option>Value 3</option>
+                <option>Value 4</option>
+                <option>Value 5</option>
+              </select></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

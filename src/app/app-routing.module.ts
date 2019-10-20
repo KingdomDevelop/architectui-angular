@@ -48,6 +48,8 @@ import {AdminVacacionesComponent} from './DemoPages/Components/admin-vacaciones/
 import {AdminCalendarioComponent} from './DemoPages/Components/admin-calendario/admin-calendario.component';
 import {AdminLicenciasComponent} from './DemoPages/Components/admin-licencias/admin-licencias.component';
 import {VisualizarPermisosLicenciasComponent} from './DemoPages/Components/visualizar-permisos-licencias/visualizar-permisos-licencias.component';
+import {IngresarPermisoComponent} from './DemoPages/Components/ingresar-permiso/ingresar-permiso.component';
+import {IngresarLicenciaComponent} from './DemoPages/Components/ingresar-licencia/ingresar-licencia.component';
 
 // Widgets
 
@@ -104,7 +106,8 @@ const routes: Routes = [
       {path: 'components/admin-calendario',component:AdminCalendarioComponent, data: {extraParameter: 'componentsMenu'}},  //new
       {path:'components/admin-licencias',component:AdminLicenciasComponent, data:{extraParameter:'componentsMenu'}}, //new
       {path:'components/visualizar-permisos-licencias',component:VisualizarPermisosLicenciasComponent,data:{extraParameter:'componentsMenu'}}, //new
-
+      {path:'components/ingresar-permiso',component:IngresarPermisoComponent,data:{extraParameter:'componentsMenu'}},//new
+      {path:'components/ingresar-licencia',component:IngresarLicenciaComponent,data:{extraParameter:'componentsMenu'}},//new
       // Widgets
 
       {path: 'widgets/chart-boxes-3', component: ChartBoxes3Component, data: {extraParameter: 'pagesMenu3'}},

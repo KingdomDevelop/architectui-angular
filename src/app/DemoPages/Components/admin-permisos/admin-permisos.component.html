@@ -3,7 +3,7 @@
     <!-- Navbar content -->
     <a class="navbar-brand" routerLink="/components/visualizar-permisos-licencias">Ver Todos</a>
     <a class="navbar-brand" routerLink="/components/admin-permisos">Permisos</a>
-    <a class="navbar-brand" href="#">Ingreso</a>
+    <a class="navbar-brand" routerLink="/components/ingresar-permiso">Ingreso</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -77,62 +77,3 @@
     </div>
   </div>
 </div>
-<div class="main-card mb-3 card" style="margin-top: 5%;">
-    <div class="card-body"><h5 class="card-title">Registro de Permisos</h5>
-      <form>
-        <div class="form-row">
-          <div class="col-md-6">
-              <div class="position-relative form-group"><label for="exampleSelect">Trabajador</label>
-                <select placeholder="Seleccionar Trabajador" name="select" id="exampleSelect" class="form-control">
-                  <option>Gaspar Nahuelcura</option>
-                  <option>Daniel Fuenzalida</option>
-                  <option>Rodrigo Cifuentes</option>
-                  <option>Maria Jose</option>
-                  <option>Juan Perez</option>
-                </select>
-              </div>
-          </div>
-          <div class="col-md-6">
-            <div class="position-relative form-group">
-                <label for="exampleSelectMulti">Tipo de Ausencia</label>
-                  <select placeholder="Seleccionar Ausencia" name="selectAusencia" id="exampleSelectAusencia" class="form-control">
-                    <option>Tramite Personal</option>
-                    <option>Problema Familiar</option>
-                    <option>Devolución de dias</option>
-                    <option>Enfermedad</option>
-                    <option>Sin Aviso</option>
-                    <option>Otro</option>
-                  </select>
-              </div>
-          </div>
-        </div>
-        <div class="position-relative form-group"><label for="exampleText">Justificación</label>
-          <textarea name="text" id="exampleText" class="form-control"></textarea>
-        </div>
-        <div class="form-row">
-          <div class="col-md-6">
-            <div class="position-relative form-group"><label for="exampleCity">Día</label><input name="city"
-                                                                                                  id="exampleCity"
-                                                                                                  type="text"
-                                                                                                  class="form-control">
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="position-relative form-group"><label for="exampleState">Mes</label><input name="state"
-                                                                                                    id="exampleState"
-                                                                                                    type="text"
-                                                                                                    class="form-control">
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="position-relative form-group"><label for="exampleZip">Año</label><input name="zip"
-                                                                                                id="exampleZip"
-                                                                                                type="text"
-                                                                                                class="form-control">
-            </div>
-          </div>
-        </div>
-        <button class="mt-2 btn btn-primary">Ingresar</button>
-      </form>
-    </div>
-  </div>
