@@ -40,7 +40,7 @@
     "font-awesome": "^4.7.0",
     "fullcalendar": "^3.10.1",
     "jquery": "^3.4.1",
-    "lodash-es": "^4.17.11",
+    "lodash-es": "^4.17.21",
     "moment": "^2.24.0",
     "ng-bootstrap": "^1.6.3",
     "ng-fullcalendar": "^2.0.3",
