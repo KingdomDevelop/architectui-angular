@@ -41,7 +41,7 @@
     "fullcalendar": "^3.10.1",
     "jquery": "^3.4.1",
     "lodash-es": "^4.17.11",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "ng-bootstrap": "^1.6.3",
     "ng-fullcalendar": "^2.0.3",
     "ng2-charts": "^2.2.2",
